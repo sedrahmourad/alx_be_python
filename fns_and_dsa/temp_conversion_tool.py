@@ -1,4 +1,4 @@
-# Global conversion factors
+
 FAHRENHEIT_TO_CELSIUS_FACTOR = 5 / 9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9 / 5
 
@@ -8,12 +8,11 @@ def convert_to_celsius(fahrenheit):
 def convert_to_fahrenheit(celsius):
     return (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
 
-# Function to check if a string can be converted to float
+
 def is_number(value):
     return value.replace('.', '', 1).isdigit() or \
            (value.startswith('-') and value[1:].replace('.', '', 1).isdigit())
 
-# User interaction
 temp_input = input("Enter the temperature to convert: ")
 
 if not is_number(temp_input):
